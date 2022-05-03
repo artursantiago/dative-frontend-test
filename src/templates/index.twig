@@ -6,15 +6,29 @@
 {% endblock headLinks %}
 
 {% block content %}
-	<section>
-		<h1>content</h1>
-	</section>
+
+{% include "_partials/_container.twig" with {
+  content: '
+    <section>
+      <h1>content</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus tempus mauris, eu aliquam orci aliquam a. Vestibulum ornare sapien sit amet tellus vestibulum lobortis. Proin imperdiet, neque et viverra.</p>
+    </section>
+  ',
+} %}
+
 {% endblock %}
 
 {% block subcontent %}
-	<section>
-		<h2>subcontent</h2>
-	</section>
+
+{% include "_partials/_container.twig" with {
+  content: '
+    <section>
+      <h2>subcontent</h2>
+    </section>
+  ',
+  bgColor: 'bg-indigo-400'
+} %}
+
 {% endblock %}
 
 {# -- Any JavaScript that should be included before </body> -- #}
